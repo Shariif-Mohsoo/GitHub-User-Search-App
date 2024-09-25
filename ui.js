@@ -10,22 +10,40 @@ class UI {
                     class="col-md-3"
                 >
                     <img class="img-fluid mb-2" src="${user.avatar_url}"/>
-                    <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-block mb-4 ">
+                    <a href="${
+                      user.html_url
+                    }" target="_blank" class="btn btn-primary btn-block mb-4 ">
                         View Profile
                     </a>
                     </div>
                 <div  class="col-md-9" >
-                    <span class="badge bg-primary">Public Repo's: ${user.public_repos}</span>
-                    <span class="badge bg-secondary">Public Gist's: ${user.public_gists}</span>
-                    <span class="badge bg-success">Follower's: ${user.public_followers}</span>
-                    <span class="badge bg-info">Following: ${user.following}</span>
+                    <span class="badge bg-primary">Public Repo's: ${
+                      user.public_repos
+                    }</span>
+                    <span class="badge bg-secondary">Public Gist's: ${
+                      user.public_gists
+                    }</span>
+                    <span class="badge bg-success">Follower's: ${
+                      user.followers
+                    }</span>
+                    <span class="badge bg-info">Following: ${
+                      user.following
+                    }</span>
 
                     <br><br>
                     <ul class="list-group" >
-                        <li class="list-group-item" >Company: ${user.company}</li>
-                        <li class="list-group-item" >Website/Blog: ${user.blog}</li>
-                        <li class="list-group-item" >Location: ${user.location}</li>
-                        <li class="list-group-item" >Member Since: ${user.created_at}</li>
+                        <li class="list-group-item" >Company: ${
+                          user.company || " Not Specified By Profile Owner"
+                        }</li>
+                        <li class="list-group-item" >Website/Blog: ${
+                          user.blog || " Not Specified By Profile Owner"
+                        }</li>
+                        <li class="list-group-item" >Location: ${
+                          user.location || " Not Specified By Profile Owner"
+                        }</li>
+                        <li class="list-group-item" >Member Since: ${
+                          user.created_at
+                        }</li>
                     </ul>
                 </div>
             </div>
